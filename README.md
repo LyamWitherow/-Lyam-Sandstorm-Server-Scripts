@@ -4,7 +4,7 @@ Until NWI either fixes or drops Linux server support, a lot of custom maps will 
 
 Let me know via Discord or Reddit if there's problems with the script.
 
-##Step 1: Paste this into the terminal:
+## Step 1: Paste this into the terminal:
 
 `curl https://raw.githubusercontent.com/Lyamc/-Lyam-Sandstorm-Server-Scripts/master/UpdateWineInsurgencyServer.sh --output UpdateWineInsurgencyServer.sh; chmod 755 UpdateWineInsurgencyServer.sh; ./UpdateWineInsurgencyServer.sh`
 
@@ -16,7 +16,7 @@ Let me know via Discord or Reddit if there's problems with the script.
 4) Download/update/install the Windows version of the Sandstorm server via steamcmd
 5) Checks for config folders, and if they don't exist, the script creates the folders and auto-generates Game.ini, Engine.ini, Mods.txt, MapCycle.txt, Admins.txt, and a startup script to make launching easier.
 
-##Step 2: Type this into your terminal
+## Step 2: Type this into your terminal
 
 `~/StartWineInsurgencyServer.sh`
 
