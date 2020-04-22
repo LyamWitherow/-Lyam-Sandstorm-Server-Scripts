@@ -1,14 +1,14 @@
-# -Lyam-Sandstorm-Server-Scripts
+# [Lyam] Sandstorm Server Scripts
 
 Until NWI either fixes or drops Linux server support, a lot of custom maps will continue to have issues on your servers. However, everything works great when using the Windows version in Linux via WINE, and I created a script that'll get you up and running. (Assuming you're running Ubuntu)
 
 Let me know via Discord or Reddit if there's problems with the script.
 
-Step 1: Paste this into the terminal:
+##Step 1: Paste this into the terminal:
 
-curl https://raw.githubusercontent.com/Lyamc/-Lyam-Sandstorm-Server-Scripts/master/UpdateWineInsurgencyServer.sh --output UpdateWineInsurgencyServer.sh; chmod 755 UpdateWineInsurgencyServer.sh; ./UpdateWineInsurgencyServer.sh
+`curl https://raw.githubusercontent.com/Lyamc/-Lyam-Sandstorm-Server-Scripts/master/UpdateWineInsurgencyServer.sh --output UpdateWineInsurgencyServer.sh; chmod 755 UpdateWineInsurgencyServer.sh; ./UpdateWineInsurgencyServer.sh`
 
-What this script does:
+**What this script does:**
 
 1) Make sure you're not using sudo
 2) Install/update wine and other dependencies via apt
@@ -16,9 +16,9 @@ What this script does:
 4) Download/update/install the Windows version of the Sandstorm server via steamcmd
 5) Checks for config folders, and if they don't exist, the script creates the folders and auto-generates Game.ini, Engine.ini, Mods.txt, MapCycle.txt, Admins.txt, and a startup script to make launching easier.
 
-Step 2: Type this into your terminal
+##Step 2: Type this into your terminal
 
-~/StartWineInsurgencyServer.sh
+`~/StartWineInsurgencyServer.sh`
 
 And you should see a server called "Linux Wine Server" appear in the server browser. To change the name, just edit the StartWineInsurgencyServer.sh
 
