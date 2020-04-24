@@ -43,7 +43,9 @@ read -s aptpass
 echo "$aptpass" | sudo apt-get update
 echo "$aptpass" | sudo apt-get install $winename p7zip curl winetricks --install-recommends -y
 echo "
-	Apt install finished"
+Apt install finished"
+
+winecfg
 
 echo "
 Checking for wine directory..."
