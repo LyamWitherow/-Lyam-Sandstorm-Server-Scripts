@@ -125,8 +125,6 @@ then
 curl -SL https://raw.githubusercontent.com/Lyamc/-Lyam-Sandstorm-Server-Scripts/master/Engine.ini --output "$serverconfigdir/Engine.ini"
 curl -SL https://raw.githubusercontent.com/Lyamc/-Lyam-Sandstorm-Server-Scripts/master/Game.ini --output "$serverconfigdir/Game.ini"
 
-head -n -4 "$serverconfigdir/Engine.ini"
-
 echo "
 To use mods, you must have a mod.io API key. 
 
@@ -134,10 +132,7 @@ Your mod.io can be found by creating an account and logging into mod.io, then na
 "
 
 read -p "Enter mod.io API key here: " modioapi
-echo "[/Script/ModKit.ModIOClient]
-bHasUserAcceptedTerms=True
-bCachedUserDetails=True
-AccessToken=$modioapi" >> $serverconfigdir/Engine.ini
+echo "AccessToken=$modioapi" >> $serverconfigdir/Engine.ini
 
 fi
 
