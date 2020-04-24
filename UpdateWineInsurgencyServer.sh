@@ -38,7 +38,6 @@ servercustomconfigdir="$sandstormdir/Config/Server"
 serverexe="$sandstormdir/Binaries/Win64/InsurgencyServer-Win64-Shipping.exe"
 
 #	Installs dependencies
-echo "Enter your password to run apt: "
 read -s aptpass
 echo "$aptpass" | sudo apt-get update
 echo "$aptpass" | sudo apt-get install $winename p7zip curl winetricks --install-recommends -y
