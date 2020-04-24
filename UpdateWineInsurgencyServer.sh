@@ -43,7 +43,21 @@ echo "$aptpass" | sudo apt-get update
 echo "$aptpass" | sudo apt-get install $winename p7zip curl winetricks --install-recommends -y
 echo "
 Apt install finished"
-
+echo "
+Opening TCP/UDP Ports..."
+sudo iptables -A INPUT -p udp --dport 27102 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 27102 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 27103 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 27103 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 27131 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 27131 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 27015 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 27015 -j ACCEPT
+echo "Opened ports 27102, 27103, 27131, 27015
+"
+sleep 1
+echo "Autogenerating wine directory
+"
 winecfg
 
 echo "
