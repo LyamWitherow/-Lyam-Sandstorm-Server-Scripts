@@ -40,7 +40,7 @@ serverexe="$sandstormdir/Binaries/Win64/InsurgencyServer-Win64-Shipping.exe"
 #	Installs dependencies
 read -s aptpass
 echo "$aptpass" | sudo apt-get update
-echo "$aptpass" | sudo apt-get install $winename p7zip curl winetricks --install-recommends -y
+sudo apt-get install $winename p7zip curl winetricks --install-recommends -y
 echo "
 Apt install finished"
 echo "
@@ -122,8 +122,8 @@ then
 			mkdir "$sandstormdir/Saved"
 			mkdir "$sandstormdir/Saved/Config"
 			mkdir "$sandstormdir/Saved/Config/WindowsServer"
-curl -SL https://raw.githubusercontent.com/zWolfi/INS_Sandstorm/master/Insurgency/Saved/Config/WindowsServer/Engine.ini --output "$serverconfigdir/Engine.ini"
-curl -SL https://raw.githubusercontent.com/zWolfi/INS_Sandstorm/master/Insurgency/Saved/Config/WindowsServer/Game.ini --output "$serverconfigdir/Game.ini"
+curl -SL https://raw.githubusercontent.com/Lyamc/-Lyam-Sandstorm-Server-Scripts/master/Engine.ini --output "$serverconfigdir/Engine.ini"
+curl -SL https://raw.githubusercontent.com/Lyamc/-Lyam-Sandstorm-Server-Scripts/master/Game.ini --output "$serverconfigdir/Game.ini"
 
 head -n -4 "$serverconfigdir/Engine.ini"
 
@@ -184,6 +184,7 @@ then
 
 
 echo "#!/bin/bash" >> "$HOME/StartWineInsurgencyServer.sh"
+echo "randnum=$RANDOM" >> "$HOME/StartWineInsurgencyServer.sh"
 #~
 #~
 #~winename="wine"
@@ -213,7 +214,7 @@ echo "#!/bin/bash" >> "$HOME/StartWineInsurgencyServer.sh"
 #~-Mods \
 #~-Port=27102 \
 #~-QueryPort=27131 \
-#~-hostname="Linux Wine Server" \
+#~-hostname="Linux Wine Server $randnum" \
 #~-MapCycle=MapCycle \
 #~-NoEAC \
 #~-Rcon \
