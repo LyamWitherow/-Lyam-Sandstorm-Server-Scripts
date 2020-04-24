@@ -207,7 +207,7 @@ echo "randnum=$RANDOM" >> "$HOME/StartWineInsurgencyServer.sh"
 #~
 #~read -p "Choose Map: " mapchoice
 #~
-#~wine \
+#~$winename \
 #~$serverexe \
 #~${maplist[0]}  \
 #~-mutators=none \
