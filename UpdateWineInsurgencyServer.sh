@@ -39,7 +39,10 @@ serverexe="$sandstormdir/Binaries/Win64/InsurgencyServer-Win64-Shipping.exe"
 
 #	Installs dependencies
 if [ "$EUID" -eq 0 ] 
-	then exec sudo apt-get update; sudo apt-get install $winename p7zip curl winetricks --install-recommends -y
+	then
+	read -s "To run apt, enter your password: " aptpass
+	echo "$aptpass" | sudo apt-get update
+	echo "$aptpass" | sudo apt-get install $winename p7zip curl winetricks --install-recommends -y
 	echo "
 	Apt install finished"
 fi
