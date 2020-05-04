@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.1
+VERSION=0.2
 
 echo "	IF THIS SCRIPT DOES NOT EXECUTE OR AUTOTAB-COMPLETE, YOU MUST RUN "chmod 755 UpdateWineInsurgencyServer" BEFORE IT WILL WORK
 	
@@ -11,7 +11,7 @@ echo "	IF THIS SCRIPT DOES NOT EXECUTE OR AUTOTAB-COMPLETE, YOU MUST RUN "chmod 
 sleep 2
 	
 echo "
-	Running UpdateWineInsurgencyServer Version 0.2
+	Running UpdateWineInsurgencyServer Version $VERSION
 	
 	"
 
