@@ -11,7 +11,7 @@ echo "	IF THIS SCRIPT DOES NOT EXECUTE OR AUTOTAB-COMPLETE, YOU MUST RUN "chmod 
 sleep 2
 	
 echo "
-	Running UpdateWineInsurgencyServer Version 0.1
+	Running UpdateWineInsurgencyServer Version 0.2
 	
 	"
 
@@ -156,7 +156,7 @@ echo "$steamid" >> "$servercustomconfigdir/Admins.txt"
 echo "
 Creating default MapCycle
 "
-echo "Farmhouse?Scenario=Scenario_Farmhouse_Checkpoint_Security" >> "$servercustomconfigdir/MapCycle.txt"
+echo "(Scenario="Scenario_Crossing_Team_DeathMatch",Mode="TeamDeathmatch",Options="Mutators=none")" >> "$servercustomconfigdir/MapCycle.txt"
 echo "
 Any mods you want to use will have to be added manually. This script just makes the process easier by creating the file.
 Uncomment (delete the ;) in order for the server to use the mod.
@@ -201,11 +201,11 @@ echo "randnum=$RANDOM" >> "$HOME/StartWineInsurgencyServer.sh"
 #~   (( ++count ))
 #~done
 #~
-#~read -p "Choose Map: " mapchoice
+#~sleep 2
 #~
 #~$winename \
 #~$serverexe \
-#~${maplist[0]}  \
+#~Crossing?Scenario=Scenario_Crossing_Team_Deathmatch  \
 #~-mutators=none \
 #~-Mods \
 #~-Port=27102 \
@@ -218,7 +218,7 @@ echo "randnum=$RANDOM" >> "$HOME/StartWineInsurgencyServer.sh"
 #~-RconListenPort=27015 \
 #~-AdminList=Admins \
 #~-EnableCheats \
-#~ModDownloadTravelTo=${maplist[$mapchoice]}
+#~ModDownloadTravelTo=Crossing?Scenario=Scenario_Crossing_Checkpoint
 
 cat "$0" | awk '$1 ~ /#~/' | sed 's/#~//g' - >> "$HOME/StartWineInsurgencyServer.sh"
 chmod 755 $HOME/StartWineInsurgencyServer.sh
