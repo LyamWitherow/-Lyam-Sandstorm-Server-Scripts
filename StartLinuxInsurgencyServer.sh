@@ -9,24 +9,22 @@ do
    (( ++count ))
 done
 
-
-
-read -p "Choose Map: " mapchoice
+sleep 2
 
 
 
 ~/.steam/SteamApps/common/sandstorm_server/Insurgency/Binaries/Linux/InsurgencyServer-Linux-Shipping \
-${maplist[0]}  \
+Crossing?Scenario=Scenario_Crossing_Checkpoint  \
 -mutators=none \
 -Mods \
 -Port=27102 \
 -QueryPort=27131 \
--hostname="LINUX SERVER" \
--MapCycle=MapCycle \
+-hostname="LINUX SERVER $RANDOM" \
+-MapCycle=MapCycle.txt \
 -NoEAC \
 -Rcon \
 -RconPassword=password \
 -RconListenPort=27015 \
 -AdminList=Admins \
 -EnableCheats \
-ModDownloadTravelTo=${maplist[$mapchoice]}
+ModDownloadTravelTo=Crossing?Scenario=Scenario_Crossing_Team_Deathmatch
