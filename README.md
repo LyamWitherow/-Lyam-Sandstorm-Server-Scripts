@@ -1,6 +1,6 @@
 # [Lyam] Sandstorm Server Scripts
 
-Until NWI either fixes or drops Linux server support, a lot of custom maps will continue to have issues on your servers. However, everything works great when using the Windows version in Linux via WINE, and I created a script that'll get you up and running. (Assuming you're running Ubuntu)
+Right now, custom maps have issues with the Linux Servers. However, everything works great when using the Windows version in Linux via WINE, so I've created a script that'll get you up and running. (Assuming you're running Ubuntu)
 
 Let me know via Discord or Reddit if there's problems with the script.
 
