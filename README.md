@@ -2,8 +2,6 @@
 
 Right now, custom maps have issues with the Linux Servers. However, everything works great when using the Windows version in Linux via WINE, so I've created a script that'll get you up and running. (Assuming you're running Ubuntu)
 
-Let me know via Discord or Reddit if there's problems with the script.
-
 ## Step 1: Paste this into the terminal:
 
 `curl https://raw.githubusercontent.com/Lyamc/-Lyam-Sandstorm-Server-Scripts/master/UpdateWineInsurgencyServer.sh --output UpdateWineInsurgencyServer.sh; chmod 755 UpdateWineInsurgencyServer.sh; ./UpdateWineInsurgencyServer.sh`
